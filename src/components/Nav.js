@@ -5,14 +5,14 @@ function Nav() {
   return (
     <div className="Nav">
       <h1>Worths General Store</h1>
-      <div>
-        <div>
+      <div className="pages">
+        <div className="page">
           <Link to="/">Home</Link>
         </div>
-        <div>
+        <div className="page">
           <Link to="/Shop">Shop</Link>
         </div>
-        <div>
+        <div className="page">
           <Link to="/Cart">Cart</Link>
         </div>
       </div>

@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <div className="Home">
-      This is this home page and here is where, we welcome the user and direct
-      them to Shop page
+      <div>Welcome to Wortgs general store</div>
+      <div className="enter-shop">
+        <Link to="./Shop">Enter Shop</Link>
+      </div>
     </div>
   );
 }

@@ -2,6 +2,42 @@
   text-align: center;
 }
 
+/* ------NAV---------------- */
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.pages {
+  display: flex;
+}
+
+.page {
+  margin-right: 3rem;
+}
+
+/* ------NAV---------------- */
+
+/* ------HOME---------------- */
+.Home {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.enter-shop {
+  margin-top: 1.5rem;
+  background-color: #282c34;
+  color: white;
+}
+
+/* ------HOME---------------- */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
