@@ -1,11 +1,14 @@
 import './App.css';
 import { Link } from 'react-router-dom';
 
-function Cart() {
+function Cart(props) {
+  const { products } = props;
+
   return (
     <div className="Cart">
-      When user add a product to cart, the number of items added to card updates
-      and the item is put into an array.
+      <div className=""></div>
+      TAKES IN ARRAY OF PRODUCTS AND RENDERS THEM ALONG WITH TOTAL PRICE, MAYBE
+      DATE
     </div>
   );
 }

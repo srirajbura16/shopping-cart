@@ -3,19 +3,23 @@
 }
 
 /* ------NAV---------------- */
-.Nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  min-height: 10vh;
 }
 
-.pages {
+nav h1 {
+  margin-left: 3rem;
+}
+
+.nav-links {
+  width: 40%;
   display: flex;
-}
-
-.page {
-  margin-right: 3rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
 /* ------NAV---------------- */
