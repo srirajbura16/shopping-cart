@@ -10,7 +10,7 @@ function Product(props) {
         <img src={img} />
       </div>
       <div>{title}</div>
-      <div>{price.toString()}</div>
+      <div>{price}</div>
     </div>
   );
 }

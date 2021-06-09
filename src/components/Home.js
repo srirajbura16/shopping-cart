@@ -7,7 +7,7 @@ function Home() {
     <div className="Home">
       <div>Welcome to Wortgs general store</div>
       <div className="enter-shop">
-        <Link to="./Shop">Enter Shop</Link>
+        <Link to="./shop">Enter Shop</Link>
       </div>
     </div>
   );
