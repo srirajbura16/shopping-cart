@@ -13,8 +13,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/shop" component={Shop} />
-        <Route exact path="/cart" component={Cart} />
         <Route exact path="/shop/:id" component={ItemDetail} />
+        <Route exact path="/cart" component={Cart} />
       </Switch>
     </Router>
   );

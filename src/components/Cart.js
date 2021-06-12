@@ -7,7 +7,7 @@ function Cart(props) {
 
   return (
     <div className="Cart">
-      <div className="cart-products">
+      {/* <div className="cart-products">
         {products.map((product) => {
           return (
             <Product
@@ -18,7 +18,8 @@ function Cart(props) {
             />
           );
         })}
-      </div>
+      </div> */}
+      hihihi
     </div>
   );
 }

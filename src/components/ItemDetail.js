@@ -9,15 +9,18 @@ function ItemDetail(props) {
   return (
     <div>
       {/* {Add image} */}
-      <div>{product.title}</div>
-      <div>{product.price}</div>
-      <input type="number" max="5" min="0" placeholder="1" />
       <h1>{id}</h1>
+      <form>
+        <div>{product.title}</div>
+        <div>{product.price}</div>
+        <input type="number" max="5" min="0" placeholder="1" />
+        <input type="submit" value="Add" />
+      </form>
     </div>
   );
 }
 
-//'add to cart' btn -> click -> add item to card products as obj with the amount. ex:
+//'add to cart' btn -> submit -> add item to card products as obj with the amount. ex:
 // const obj = {
 //   item,
 //   amount,

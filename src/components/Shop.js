@@ -10,15 +10,8 @@ import {
   useRouteMatch,
 } from 'react-router-dom';
 import Product from './Product';
-import ItemDetail from './ItemDetail';
 
 function Shop() {
-  const [products, setProducts] = useState([]);
-
-  function addToCart(que) {
-    console.log(que);
-  }
-
   return (
     <div className="shop">
       <div className="products">
