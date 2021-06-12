@@ -1,9 +1,26 @@
 import { Link, useParams, useRouteMatch } from 'react-router-dom';
+import React, { useState } from 'react';
 import { findProduct } from '../items';
 
 function ItemDetail(props) {
-  let { id } = useParams();
+  //cart items -> form submit -> setCartItems(item)
 
+  const [cartItems, setCartItems] = useState();
+  const [amount, setAmount] = useState();
+
+  function handleChange(e) {
+    const amount = e.target.value;
+    setAmount(amount);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const item = findProduct(id);
+    //format Item
+    //setCartItems(item)
+    //return to shop page
+  }
+  let { id } = useParams();
   const product = findProduct(id);
 
   return (
