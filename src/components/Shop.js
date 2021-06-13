@@ -17,6 +17,7 @@ function Shop() {
               <Product
                 key={item.id}
                 id={item.id}
+                img={item.img}
                 title={item.title}
                 price={item.price}
               />

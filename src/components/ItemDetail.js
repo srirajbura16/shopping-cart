@@ -22,10 +22,7 @@ function ItemDetail(props) {
 
     // }
     setCartItems(cartItems.concat(item));
-    console.log(cartItems);
-
     setAmount(1);
-    //return to shop page
   }
 
   let { id } = useParams();
