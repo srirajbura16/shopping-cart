@@ -1,17 +1,13 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { ItemsContext } from './ItemsContext';
 import { items } from '../items';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams,
-  useRouteMatch,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Product from './Product';
 
 function Shop() {
+  const [cartItems, setCartItems] = useContext(ItemsContext);
+
   return (
     <div className="shop">
       <div className="products">

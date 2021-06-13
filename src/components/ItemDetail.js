@@ -1,33 +1,35 @@
-import { Link, useParams, useRouteMatch } from 'react-router-dom';
-import React, { useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
 import { findProduct } from '../items';
+import { ItemsContext } from './ItemsContext';
 
 function ItemDetail(props) {
-  //cart items -> form submit -> setCartItems(item)
-
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useContext(ItemsContext);
   const [amount, setAmount] = useState(1);
 
   function handleChange(e) {
     const newAmount = parseInt(e.target.value);
     setAmount(newAmount);
-    // console.log(newAmount, amount);
+    console.log(amount, cartItems);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     const item = findProduct(id);
     item.amount = amount;
+    // if(cartItems.includes(item)){
+    //   //add item amount to existing item amount
+
+    // }
     setCartItems(cartItems.concat(item));
-    // console.log(cartItems);
-    // console.log(item, amount, cartItems);
+    console.log(cartItems);
+
+    setAmount(1);
     //return to shop page
   }
+
   let { id } = useParams();
   const product = findProduct(id);
-  const log = () => {
-    console.log(cartItems);
-  };
 
   return (
     <div>
@@ -43,9 +45,10 @@ function ItemDetail(props) {
           min="1"
           placeholder="1"
         />
+        {/* <Link to="/shop"> */}
         <input type="submit" value="Add" />
+        {/* </Link> */}
       </form>
-      <button onClick={log}>log</button>
     </div>
   );
 }
