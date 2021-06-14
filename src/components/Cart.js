@@ -14,6 +14,7 @@ function Cart(props) {
     });
     return t;
   }
+
   return (
     <div className="Cart">
       <div className="cart-products">
