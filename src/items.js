@@ -7,6 +7,31 @@ let items = [
     price: 22,
     id: nanoid(),
   },
+  {
+    title: 'Bow',
+    price: 22,
+    id: nanoid(),
+  },
+  {
+    title: 'Bow',
+    price: 22,
+    id: nanoid(),
+  },
+  {
+    title: 'Bow',
+    price: 22,
+    id: nanoid(),
+  },
+  {
+    title: 'Bow',
+    price: 22,
+    id: nanoid(),
+  },
+  {
+    title: 'Bow',
+    price: 22,
+    id: nanoid(),
+  },
 ];
 
 function findProduct(id) {

@@ -5,14 +5,13 @@ import Product from './Product';
 
 function Cart(props) {
   const [cartItems, setCartItems] = useContext(ItemsContext);
-  const [total, setTotal] = useState(0);
 
   function showTotal() {
-    let t = 0;
+    let total = 0;
     cartItems.forEach((item) => {
-      t += item.price * item.amount;
+      total += item.price * item.amount;
     });
-    return t;
+    return total;
   }
 
   return (
