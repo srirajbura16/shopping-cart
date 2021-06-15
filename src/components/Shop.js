@@ -1,8 +1,8 @@
-import './App.css';
 import React, { useContext } from 'react';
-import { ItemsContext } from './ItemsContext';
-import { items } from '../items';
 import { Link } from 'react-router-dom';
+import { items } from '../items';
+import './App.css';
+import { ItemsContext } from './ItemsContext';
 import Product from './Product';
 
 function Shop() {

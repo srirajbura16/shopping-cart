@@ -1,35 +1,40 @@
 import { nanoid } from 'nanoid';
-import './assets/m1899.jpg';
 
 let items = [
   {
     title: 'Bow',
-    price: 22,
+    price: 33,
+    img: 'bow.jpg',
     id: nanoid(),
   },
   {
-    title: 'Bow',
-    price: 22,
+    title: 'Hunting Knife',
+    price: 18,
+    img: 'hunting-knife.jpg',
     id: nanoid(),
   },
   {
-    title: 'Bow',
-    price: 22,
+    title: 'Lasso',
+    price: 8,
+    img: 'lasso.jpg',
     id: nanoid(),
   },
   {
-    title: 'Bow',
-    price: 22,
+    title: 'M1899',
+    price: 350,
+    img: 'm1899.jpg',
     id: nanoid(),
   },
   {
-    title: 'Bow',
-    price: 22,
+    title: 'Semi Automatic Pistol',
+    price: 210,
+    img: 'semi-automatic-pistol.jpg',
     id: nanoid(),
   },
   {
-    title: 'Bow',
-    price: 22,
+    title: 'Varmint Rifle',
+    price: 72,
+    img: 'varmint-rifle.jpg',
     id: nanoid(),
   },
 ];

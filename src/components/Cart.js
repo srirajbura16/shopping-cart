@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useContext, useState } from 'react';
 import { ItemsContext } from './ItemsContext';
-import Product from './Product';
+import CartItems from './CartItems';
 
 function Cart(props) {
   const [cartItems, setCartItems] = useContext(ItemsContext);
@@ -20,10 +20,10 @@ function Cart(props) {
         {cartItems.map((product) => {
           console.log(cartItems);
           return (
-            <Product
+            <CartItems
               title={product.title}
               price={product.price}
-              key={product.id}
+              amount={product.amount}
             />
           );
         })}

@@ -1,5 +1,4 @@
 import './App.css';
-import bow from '../assets/bow.jpg';
 
 function Product(props) {
   const { title, price, img } = props;
@@ -7,10 +6,10 @@ function Product(props) {
   return (
     <div className="Product">
       <div className="product-img">
-        <img src={bow} />
+        <img src={window.location.origin + `/assets/${img}`} />
       </div>
       <div>{title}</div>
-      <div>{`$ ${price}`}</div>
+      <div>{`$${price}`}</div>
     </div>
   );
 }
