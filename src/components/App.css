@@ -74,10 +74,45 @@ nav h1 {
 
 /* ------PRODUCT---------------- */
 
+/* ------ITEM-DETAILS---------------- */
+.item-details form {
+  display: flex;
+  font-size: 2rem;
+}
+
+.item-details .product-img {
+  width: 450px;
+  margin-right: 3rem;
+}
+
+.product-img img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.submit-btn {
+  margin-left: 0.8rem;
+}
+
+/* ------ITEM-DETAILS---------------- */
+
 /* ------CART---------------- */
 .cart-products {
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: flex;
+  flex-direction: column;
+}
+.cart-items {
+  width: 510px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.details .info {
+  margin-right: 24rem;
 }
 
 /* ------CART---------------- */

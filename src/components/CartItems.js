@@ -1,17 +1,35 @@
+import React, { useContext } from 'react';
 import './App.css';
-import React, { useContext, useState } from 'react';
 import { ItemsContext } from './ItemsContext';
+function CartItems({ title, price, amount, img, id }) {
+  const [cartItems, setCartItems] = useContext(ItemsContext);
 
-function CartItems({ title, price, amount }) {
+  function deleteItem(e) {
+    const id = e.target.className;
+    const newCartItems = cartItems.filter((item) => {
+      if (item.id !== id) {
+        return item;
+      }
+    });
+    setCartItems(newCartItems);
+  }
+
   return (
     <div className="cart-items">
       <hr />
       <div className="cart-item-img">
-        <img src="" />
+        <img src={window.location.origin + `/assets/${img}`} />
       </div>
-      <h1>{title}</h1>
-      <h1>${price}</h1>
-      <h1>Quantity: {amount}</h1>
+      <div className="details">
+        <div className="info">
+          <div>{title}</div>
+          <div>${price}</div>
+          <div>Quantity: {amount}</div>
+        </div>
+        <button className={id} onClick={deleteItem}>
+          Delete
+        </button>
+      </div>
     </div>
   );
 }

@@ -1,35 +1,45 @@
+import React, { useContext } from 'react';
 import './App.css';
-import React, { useContext, useState } from 'react';
-import { ItemsContext } from './ItemsContext';
 import CartItems from './CartItems';
+import { ItemsContext } from './ItemsContext';
 
 function Cart(props) {
   const [cartItems, setCartItems] = useContext(ItemsContext);
 
   function showTotal() {
-    let total = 0;
+    let subTotal = 0;
     cartItems.forEach((item) => {
-      total += item.price * item.amount;
+      subTotal += item.price * item.amount;
     });
-    return total;
+
+    const total = (subTotal + subTotal * 0.13).toFixed(2);
+    return {
+      subTotal,
+      total,
+    };
   }
 
   return (
     <div className="Cart">
       <div className="cart-products">
         {cartItems.map((product) => {
-          console.log(cartItems);
           return (
             <CartItems
               title={product.title}
               price={product.price}
               amount={product.amount}
+              img={product.img}
+              id={product.id}
+              key={product.id}
             />
           );
         })}
       </div>
       <hr />
-      <div>$ {showTotal()}</div>
+      <div className="total-amount">
+        <h1>Subtotal: $ {showTotal().subTotal}</h1>
+        <h1>Total: $ {showTotal().total}</h1>
+      </div>
     </div>
   );
 }

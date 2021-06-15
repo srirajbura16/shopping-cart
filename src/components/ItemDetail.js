@@ -1,5 +1,5 @@
-import { Link, useParams } from 'react-router-dom';
-import React, { useState, useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { findProduct } from '../items';
 import { ItemsContext } from './ItemsContext';
 
@@ -29,22 +29,26 @@ function ItemDetail(props) {
   const product = findProduct(id);
 
   return (
-    <div>
-      {/* {Add image} */}
+    <div className="item-details">
       <h1>{id}</h1>
+      {/* {Add image} */}
       <form onSubmit={handleSubmit}>
-        <div>{product.title}</div>
-        <div>{product.price}</div>
-        <input
-          onChange={handleChange}
-          type="number"
-          max="5"
-          min="1"
-          placeholder="1"
-        />
-        {/* <Link to="/shop"> */}
-        <input type="submit" value="Add" />
-        {/* </Link> */}
+        <div className="product-img">
+          <img src={window.location.origin + `/assets/${product.img}`} />
+        </div>
+        <div className="info">
+          <h3>{product.title}</h3>
+          <div>${product.price}</div>
+          <input
+            onChange={handleChange}
+            type="number"
+            max="5"
+            min="1"
+            placeholder="1"
+            className="quant-btn"
+          />
+          <input className="submit-btn" type="submit" value="Add" />
+        </div>
       </form>
     </div>
   );
