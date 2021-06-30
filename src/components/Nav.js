@@ -1,23 +1,26 @@
-import './App.css';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import React, { useContext, useState } from 'react';
+import './App.css';
 import { ItemsContext } from './ItemsContext';
 function Nav() {
   const [cartItems, setCartItems] = useContext(ItemsContext);
-
+  const linkStyles = { textDecoration: 'none', color: 'black' };
   return (
     <nav>
-      <h1>Worths General Store</h1>
+      <Link to="/" style={linkStyles}>
+        <h1>
+          Worths
+          <br />
+          Hunting Store
+        </h1>
+      </Link>
       <ul className="nav-links">
-        <Link to="/">
-          <li>Home</li>
+        <Link to="/shop" style={linkStyles}>
+          <li>SHOP</li>
         </Link>
-        <Link to="/shop">
-          <li>Shop</li>
-        </Link>
-        <Link to="/cart">
+        <Link to="/cart" style={linkStyles}>
           <li>
-            Cart <span>{cartItems.length}</span>
+            CART <span>{cartItems.length > 0 && cartItems.length}</span>
           </li>
         </Link>
       </ul>

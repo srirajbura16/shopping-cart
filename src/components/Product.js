@@ -4,7 +4,7 @@ function Product(props) {
   const { title, price, img } = props;
 
   return (
-    <div className="Product">
+    <div className="product">
       <div className="product-img">
         <img src={window.location.origin + `/assets/${img}`} />
       </div>

@@ -1,14 +1,19 @@
-import './App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './App.css';
 
 function Home() {
   return (
     <div className="Home">
-      <div>Welcome to Wortgs general store</div>
-      <div className="enter-shop">
-        <Link to="./shop">Enter Shop</Link>
+      <div>
+        Welcome to Wortgs Hunting Store. <br />
+        Find everything you need
+        <br />
+        for your next hunting trip.
       </div>
+      <Link to="./shop">
+        <button class="enter-shop-btn">Enter Shop</button>
+      </Link>
     </div>
   );
 }

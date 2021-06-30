@@ -20,7 +20,6 @@ function Shop() {
                 img={item.img}
                 title={item.title}
                 price={item.price}
-                key={item.id}
               />
             </Link>
           );
