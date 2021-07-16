@@ -1,16 +1,17 @@
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './components/App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Nav from './components/Nav';
-import Home from './components/Home';
-import Shop from './components/Shop';
 import Cart from './components/Cart';
+import Home from './components/Home';
 import ItemDetail from './components/ItemDetail';
 import { ItemsProvider } from './components/ItemsContext';
+import Nav from './components/Nav';
+import Shop from './components/Shop';
 
 function App() {
   return (
     <ItemsProvider>
-      <Router>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/* <Router> */}
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -18,7 +19,8 @@ function App() {
           <Route exact path="/shop/:id" component={ItemDetail} />
           <Route exact path="/cart" component={Cart} />
         </Switch>
-      </Router>
+        {/* </Router> */}
+      </BrowserRouter>
     </ItemsProvider>
   );
 }

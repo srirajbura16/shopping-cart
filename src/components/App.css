@@ -93,12 +93,21 @@ nav {
 /* ------ITEM-DETAILS---------------- */
 
 /* ------CART---------------- */
+/* .Cart {
+  display: flex;
+} */
+
 .cart-products {
   display: flex;
   flex-direction: column;
 }
 .cart-items {
   width: 510px;
+}
+
+.cart-items-img {
+  width: 100px;
+  height: 100px;
 }
 
 .details {

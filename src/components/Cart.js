@@ -22,18 +22,32 @@ function Cart(props) {
   return (
     <div className="Cart">
       <div className="cart-products">
-        {cartItems.map((product) => {
-          return (
-            <CartItems
-              title={product.title}
-              price={product.price}
-              amount={product.amount}
-              img={product.img}
-              id={product.id}
-              key={product.id}
-            />
-          );
-        })}
+        <table>
+          <thead>
+            <th>Description</th>
+            <th>Item ID</th>
+            <th>Quantity</th>
+            <th>Value</th>
+          </thead>
+          <hr />
+          <tbody>
+            {cartItems.map((product) => {
+              return (
+                <tr>
+                  <CartItems
+                    title={product.title}
+                    price={product.price}
+                    amount={product.amount}
+                    img={product.img}
+                    id={product.id}
+                    key={product.id}
+                  />
+                </tr>
+              );
+            })}
+            <tr></tr>
+          </tbody>
+        </table>
       </div>
       <hr />
       <div className="total-amount">

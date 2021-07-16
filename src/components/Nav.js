@@ -20,7 +20,7 @@ function Nav() {
         </Link>
         <Link to="/cart" style={linkStyles}>
           <li>
-            CART <span>{cartItems.length > 0 && cartItems.length}</span>
+            CART <span>{cartItems.length > 0 && ' - ' + cartItems.length}</span>
           </li>
         </Link>
       </ul>

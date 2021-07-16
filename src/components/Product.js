@@ -6,7 +6,7 @@ function Product(props) {
   return (
     <div className="product">
       <div className="product-img">
-        <img src={window.location.origin + `/assets/${img}`} />
+        <img src={process.env.PUBLIC_URL + `/assets/${img}`} />
       </div>
       <div>{title}</div>
       <div>{`$${price}`}</div>

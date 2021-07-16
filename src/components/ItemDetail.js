@@ -34,7 +34,7 @@ function ItemDetail(props) {
       {/* {Add image} */}
       <form onSubmit={handleSubmit}>
         <div className="product-img">
-          <img src={window.location.origin + `/assets/${product.img}`} />
+          <img src={process.env.PUBLIC_URL + `/assets/${product.img}`} />
         </div>
         <div className="info">
           <h3>{product.title}</h3>

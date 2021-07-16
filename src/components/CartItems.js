@@ -15,22 +15,23 @@ function CartItems({ title, price, amount, img, id }) {
   }
 
   return (
-    <div className="cart-items">
-      <hr />
-      <div className="cart-item-img">
-        <img src={window.location.origin + `/assets/${img}`} />
-      </div>
-      <div className="details">
-        <div className="info">
-          <div>{title}</div>
-          <div>${price}</div>
-          <div>Quantity: {amount}</div>
+    <tr className="cart-items">
+      {/* <td>{IMG and DESCRIPTION}</td> */}
+      <td>
+        <div className="cart-item-img">
+          <img src={process.env.PUBLIC_URL + `/assets/${img}`} />
         </div>
-        <button className={id} onClick={deleteItem}>
-          Delete
-        </button>
-      </div>
-    </div>
+      </td>
+      <td>
+        <div>{id}</div>
+      </td>
+      <td>
+        <div>{amount}</div>
+      </td>
+      <td>
+        <div>{price}</div>
+      </td>
+    </tr>
   );
 }
 

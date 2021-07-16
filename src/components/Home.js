@@ -6,12 +6,12 @@ function Home() {
   return (
     <div className="Home">
       <div>
-        Welcome to Wortgs Hunting Store. <br />
+        Welcome to Worths Hunting Store. <br />
         Find everything you need
         <br />
         for your next hunting trip.
       </div>
-      <Link to="./shop">
+      <Link to="/shop">
         <button class="enter-shop-btn">Enter Shop</button>
       </Link>
     </div>
