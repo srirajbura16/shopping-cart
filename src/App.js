@@ -11,7 +11,6 @@ function App() {
   return (
     <ItemsProvider>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        {/* <Router> */}
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -19,7 +18,6 @@ function App() {
           <Route exact path="/shop/:id" component={ItemDetail} />
           <Route exact path="/cart" component={Cart} />
         </Switch>
-        {/* </Router> */}
       </BrowserRouter>
     </ItemsProvider>
   );
